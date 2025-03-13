@@ -3,7 +3,8 @@
 #                           1. Data Integration                                #
 #                                                                              #
 ################################################################################
-
+#install.packages("devtools")
+#devtools::install_github("ropensci/skimr")
 
 ### Step 1.1: Create a GitHub Repository and Upload Files
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,13 +23,16 @@
 # Ensure you use the correct "raw" URL for the file.
 
 #----------------
-#u2_data <- read.csv()
+setwd("~/Desktop/AGR333/lab9")
+u2_data <- read.csv('U2_2017data.csv')
 #----------------
 
 ### Step 1.3: Explore the structure and summary of the dataframe
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Use str(), skimr::skim(), and dplyr::glimpse() to understand the dataframe.
-
+str(u2_data)
+skimr::skim(u2_data)
+dplyr::glimpse(u2_data)
 #----------------
 
 #----------------
